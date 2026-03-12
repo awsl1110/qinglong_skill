@@ -12,9 +12,11 @@
 
 ### 获取 Token
 ```
-GET /user/login?client_id=<CLIENT_ID>&client_secret=<CLIENT_SECRET>
+GET /open/auth/token?client_id=<CLIENT_ID>&client_secret=<CLIENT_SECRET>
 ```
-返回：`{"token": "xxx", "token_type": "Bearer"}`
+返回：`{"token": "xxx", "token_type": "Bearer", "expiration": 1234567890}`
+
+> 注意：所有开放 API 接口的基础路径为 `/open`，获取 token 后在 Header 中携带 `Authorization: Bearer <token>`
 
 ---
 
